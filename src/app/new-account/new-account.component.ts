@@ -10,10 +10,14 @@ import { AccountsService } from '../accounts.service';
   //providers: [LoggingService]
 })
 export class NewAccountComponent {
-  constructor(private loggingService: LoggingService, private accountService: AccountsService) { }
+  constructor(private loggingService: LoggingService, private accountService: AccountsService) {
+    this.accountService.statusUpdated.subscribe(
+      (status: string) => alert('New Status => ' + status)
+    )
+  }
 
   onCreateAccount(accountName: string, accountStatus: string) {
-    console.log('onCreateAccount: ' + accountName);
+    //console.log('onCreateAccount: ' + accountName);
     this.accountService.addAccount(accountName, accountStatus);
     //console.log('A server status changed, new status: ' + accountStatus);
     //this.loggingService.logStatusChanged(accountStatus);
