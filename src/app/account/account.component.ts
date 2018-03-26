@@ -7,7 +7,7 @@ import { stat } from 'fs';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService]
+  //providers: [LoggingService]
 })
 export class AccountComponent {
   @Input() account: { name: string, status: string };
@@ -18,6 +18,6 @@ export class AccountComponent {
   onSetTo(status: string) {
     //console.log('A server status changed, new status: ' + status);
     this.accountService.updateStatus(this.id, status);
-    this.loggingService.logStatusChanged(status);
+    //this.loggingService.logStatusChanged(status);
   }
 }

@@ -7,7 +7,7 @@ import { AccountsService } from '../accounts.service';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService]
+  //providers: [LoggingService]
 })
 export class NewAccountComponent {
   constructor(private loggingService: LoggingService, private accountService: AccountsService) { }
@@ -16,6 +16,6 @@ export class NewAccountComponent {
     console.log('onCreateAccount: ' + accountName);
     this.accountService.addAccount(accountName, accountStatus);
     //console.log('A server status changed, new status: ' + accountStatus);
-    this.loggingService.logStatusChanged(accountStatus);
+    //this.loggingService.logStatusChanged(accountStatus);
   }
 }
