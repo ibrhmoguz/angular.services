@@ -12,9 +12,10 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/core": "^0.4.6",
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
-    "@angular/compiler": "^5.0.0",
+    "@angular/compiler": "^5.2.9",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
